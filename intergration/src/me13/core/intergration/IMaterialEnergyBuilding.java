@@ -1,5 +1,6 @@
 package me13.core.intergration;
 
+import arc.struct.Seq;
 import mindustry.gen.Building;
 import mindustry.type.ItemStack;
 import mindustry.type.LiquidStack;
@@ -19,4 +20,8 @@ public interface IMaterialEnergyBuilding {
     ItemModule storage();
     LiquidModule storageLiquid();
     boolean canConnectTo(Building other);
+
+    default Seq<Building> getChildren() {
+        return new Seq<>();
+    };
 }
