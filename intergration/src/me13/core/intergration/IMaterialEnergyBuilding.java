@@ -21,7 +21,18 @@ public interface IMaterialEnergyBuilding {
     LiquidModule storageLiquid();
     boolean canConnectTo(Building other);
 
+    default int getChannelsAdd() {
+        return 0;
+    }
+
+    default int getChannels() {
+        return 1;
+    }
+
     default Seq<Building> getChildren() {
         return new Seq<>();
-    };
+    }
+
+    default void updateState() {
+    }
 }

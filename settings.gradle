@@ -1,4 +1,6 @@
-include 'layers'
 include 'intergration'
 include 'text-draw'
+include 'block'
+include 'configuration'
+include 'items'
 

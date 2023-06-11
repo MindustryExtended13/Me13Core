@@ -30,11 +30,11 @@ subprojects {
     }
 }
 
+sourceCompatibility = 8
 targetCompatibility = JavaVersion.VERSION_16
-sourceCompatibility = JavaVersion.VERSION_16
 
 ext {
-    modCoreVersion = '1.0.6b'
+    modCoreVersion = '1.0.7b'
     mindustryVersion = 'v144.3'
     jabelVersion = "93fde537c7"
     sdkRoot = System.getenv("ANDROID_HOME") ?: System.getenv("ANDROID_SDK_ROOT")
@@ -55,7 +55,7 @@ allprojects {
 
     tasks.withType(JavaCompile).tap {
         configureEach {
-            options.compilerArgs.addAll(['--release', '16'])
+            options.compilerArgs.addAll(['--release', '8'])
         }
     }
 
@@ -72,7 +72,6 @@ allprojects {
         annotationProcessor "com.github.Anuken:jabel:$jabelVersion"
         compileOnly "com.github.Anuken.Arc:arc-core:$mindustryVersion"
         compileOnly "com.github.Anuken.MindustryJitpack:core:$mindustryVersion"
-        implementation "com.github.TheEE145:TheMindustryModdingCore:v$modCoreVersion"
 
         //other (gson need for mod core)
         implementation 'com.google.code.gson:gson:2.10.1'
