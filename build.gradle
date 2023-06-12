@@ -2,7 +2,7 @@ apply plugin: "java"
 apply plugin: 'maven-publish'
 
 allprojects {
-    version = "1.5"
+    version = "v1.6"
     group = 'io.me13.core'
 }
 
@@ -34,7 +34,6 @@ sourceCompatibility = 8
 targetCompatibility = JavaVersion.VERSION_16
 
 ext {
-    modCoreVersion = '1.0.7b'
     mindustryVersion = 'v144.3'
     jabelVersion = "93fde537c7"
     sdkRoot = System.getenv("ANDROID_HOME") ?: System.getenv("ANDROID_SDK_ROOT")
