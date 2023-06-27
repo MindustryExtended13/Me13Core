@@ -4,4 +4,6 @@ include 'block'
 include 'configuration'
 include 'items'
 include 'units'
+include 'flywheel'
+include 'flycalculator'
 
