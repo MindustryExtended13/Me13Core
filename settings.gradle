@@ -1,4 +1,3 @@
-include 'intergration'
 include 'text-draw'
 include 'block'
 include 'configuration'
@@ -6,4 +5,5 @@ include 'items'
 include 'units'
 include 'flywheel'
 include 'flycalculator'
+include 'annotations'
 
