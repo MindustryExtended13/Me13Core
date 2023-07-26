@@ -34,7 +34,7 @@ public class AdvancedBlock extends Block {
             super.drawPlanRegion(plan, list);
         }
 
-        layers.forEach(layer -> {
+        layers.each(layer -> {
             if(layer != null) {
                 layer.drawPlan(plan, list);
             }
@@ -44,7 +44,7 @@ public class AdvancedBlock extends Block {
     @Override
     public void load() {
         super.load();
-        layers.forEach((layer) -> {
+        layers.each((layer) -> {
             if(layer != null) {
                 layer.load(this);
             }
@@ -75,7 +75,7 @@ public class AdvancedBlock extends Block {
                 super.draw();
             }
 
-            layers.forEach((layer) -> {
+            layers.each((layer) -> {
                 if(layer != null) {
                     layer.draw(this);
                 }
