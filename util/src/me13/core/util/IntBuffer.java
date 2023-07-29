@@ -1,4 +1,4 @@
-package me13.core.queue;
+package me13.core.util;
 
 import arc.struct.IntSeq;
 import arc.util.io.Reads;
@@ -6,6 +6,10 @@ import arc.util.io.Writes;
 
 public class IntBuffer {
     private final IntSeq ints = new IntSeq();
+
+    public IntSeq ints() {
+        return ints;
+    }
 
     public void register(int i) {
         ints.add(i);

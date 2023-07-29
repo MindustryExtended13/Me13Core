@@ -1,4 +1,4 @@
-package me13.core.queue;
+package me13.core.util;
 
 import arc.func.Cons;
 import arc.util.Log;
