@@ -5,7 +5,7 @@ import arc.util.io.Reads;
 import arc.util.io.Writes;
 
 public class IntBuffer {
-    private IntSeq ints = new IntSeq();
+    private final IntSeq ints = new IntSeq();
 
     public void register(int i) {
         ints.add(i);
@@ -24,7 +24,7 @@ public class IntBuffer {
     }
 
     public void read(Reads reads) {
-        ints = new IntSeq();
+        ints.clear();
         int len = reads.i();
         for(int i = 0; i < len; i++) {
             ints.add(reads.i());
