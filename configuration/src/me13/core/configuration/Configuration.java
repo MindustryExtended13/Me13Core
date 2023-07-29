@@ -1,18 +1,13 @@
 package me13.core.configuration;
 
 import arc.files.Fi;
-import java.util.HashMap;
-import java.util.Map;
+import arc.struct.ObjectMap;
 
 public class Configuration {
-    private final Map<String, String> defaults = new HashMap<>();
+    private final ObjectMap<String, String> defaults = new ObjectMap<>();
 
     public void setDefKey(String id, String def) {
-        if(defaults.containsKey(id)) {
-            defaults.replace(id, def);
-        } else {
-            defaults.put(id, def);
-        }
+        defaults.put(id, def);
     }
 
     public void setKey(String id, String content) {
