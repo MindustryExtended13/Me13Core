@@ -25,7 +25,7 @@ public class BlockConnections {
 
     public static Seq<Building> getConnections(Building source, ConnectionHand hand) {
         Seq<Building> seq = new Seq<>();
-        source.proximity.forEach(b -> {
+        source.proximity.each(b -> {
             if(hand.valid(source, b, b.tile)) {
                 seq.add(b);
             }
