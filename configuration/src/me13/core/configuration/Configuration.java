@@ -52,6 +52,7 @@ public class Configuration {
             }
         }
         if(hasFile) {
+            assert out != null;
             return out.readString("UTF-8");
         } else {
             return defaults.get(id);

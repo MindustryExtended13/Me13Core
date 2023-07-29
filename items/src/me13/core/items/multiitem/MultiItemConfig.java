@@ -1,12 +1,18 @@
 package me13.core.items.multiitem;
 
 import arc.func.Func;
+import mindustry.ctype.UnlockableContent;
 import mindustry.gen.Building;
 import mindustry.type.Item;
 import mindustry.world.Block;
 
 public class MultiItemConfig {
-    public static<T extends Building> void configure(Block block, Func<T, MultiItemData> getter) {
+    public static
+    <T extends Building, E extends UnlockableContent> void configure(Block block,
+                                                                     Class<E> contentTypeClass,
+                                                                     Class<E[]> contentArrayTypeClass,
+                                                                     Func<T, MultiItemData<E>> getter)
+    {
         block.config(Integer.class, (T build, Integer config) -> {
             getter.get(build).toggle(config);
         });
@@ -15,7 +21,7 @@ public class MultiItemConfig {
             getter.get(build).toggle(config);
         });
 
-        block.config(Item.class, (T build, Item config) -> {
+        block.config(contentTypeClass, (T build, E config) -> {
             getter.get(build).toggle(config);
         });
 
@@ -33,9 +39,9 @@ public class MultiItemConfig {
             }
         });
 
-        block.config(Item[].class, (T build, Item[] config) -> {
+        block.config(contentArrayTypeClass, (T build, E[] config) -> {
             var data = getter.get(build);
-            for(Item i : config) {
+            for(E i : config) {
                 data.toggle(i);
             }
         });

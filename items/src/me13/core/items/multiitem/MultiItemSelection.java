@@ -15,17 +15,16 @@ import mindustry.Vars;
 import mindustry.ctype.UnlockableContent;
 import mindustry.gen.Icon;
 import mindustry.gen.Tex;
-import mindustry.type.Item;
 import mindustry.ui.Styles;
 
 public class MultiItemSelection {
     private static TextField search;
 
-    public static void buildTable(Table table, MultiItemData data) {
-        buildTable(table, Vars.content.items(), data);
+    public static<E extends UnlockableContent> void buildTable(Table table, MultiItemData<E> data) {
+        buildTable(table, Vars.content.getBy(data.getType()), data);
     }
 
-    public static void buildTable(Table table, Seq<Item> items, MultiItemData data) {
+    public static<E extends UnlockableContent> void buildTable(Table table, Seq<E> items, MultiItemData<E> data) {
         buildTable(table, items, data::isToggled, data::enable, data::disable, data::toggle);
     }
 

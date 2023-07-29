@@ -2,7 +2,6 @@ package me13.core.block.instance;
 
 import arc.graphics.Color;
 import arc.graphics.g2d.TextureRegion;
-import arc.struct.Seq;
 import arc.util.Eachable;
 import me13.core.block.ConnectionHand;
 import me13.core.block.SchemeConnectionHand;
@@ -29,7 +28,7 @@ public class Layer {
         this(block.name + prefix, mapping);
     }
 
-    public void load(Block block) {
+    public void load() {
         regions = AdvancedBlockHelper.loadRegions(regionName, mapping);
     }
 
