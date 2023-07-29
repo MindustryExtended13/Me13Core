@@ -82,8 +82,6 @@ allprojects {
         compileOnly "com.github.Anuken.Arc:arc-core:$mindustryVersion"
         compileOnly "com.github.Anuken.MindustryJitpack:core:$mindustryVersion"
 
-        //other (gson need for mod core)
-        implementation 'com.google.code.gson:gson:2.10.1'
         compileOnly 'org.jetbrains:annotations:23.0.0'
     }
 
