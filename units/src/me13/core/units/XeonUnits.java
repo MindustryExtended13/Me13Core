@@ -10,7 +10,6 @@ import mindustry.gen.Entityc;
 @SuppressWarnings("unused") //used class
 public class XeonUnits {
     // Steal from Unlimited-Armament-Works
-    private static final Seq<Entry<Class<? extends Entityc>, Prov<? extends Entityc>>> types = new Seq<>();
     private static final ObjectIntMap<Class<? extends Entityc>> idMap = new ObjectIntMap<>();
 
     /**
@@ -21,26 +20,11 @@ public class XeonUnits {
      * @author GlennFolker
      */
     public static void setupID() {
-        for (int i = 0, j = 0; i < EntityMapping.idMap.length; i++) {
-            if (EntityMapping.idMap[i] == null) {
-                idMap.put(types.get(j).key, i);
-                EntityMapping.idMap[i] = types.get(j).value;
-                if (++j >= types.size) break;
-            }
-        }
-    }
-
-    static {
         add(XeonUnitEntity.class, XeonUnitEntity::new);
     }
 
     public static <T extends Entityc> void add(Class<T> type, Prov<T> prov) {
-        Entry<Class<? extends Entityc>, Prov<? extends Entityc>> entry = new Entry<>();
-
-        entry.key = type;
-        entry.value = prov;
-
-        types.add(entry);
+        idMap.put(type,EntityMapping.register(type.getCanonicalName(),prov));
     }
 
     /**
