@@ -6,4 +6,6 @@ include 'units'
 include 'flywheel'
 include 'flycalculator'
 include 'annotations'
+include 'util'
+include 'logger'
 
