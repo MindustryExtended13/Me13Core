@@ -28,7 +28,7 @@ public class Layer {
         this(block.name + prefix, mapping);
     }
 
-    public void load() {
+    public void load(Block block) {
         regions = AdvancedBlockHelper.loadRegions(regionName, mapping);
     }
 
