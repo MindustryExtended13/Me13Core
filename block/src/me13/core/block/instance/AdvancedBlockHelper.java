@@ -6,7 +6,6 @@ import arc.graphics.g2d.Draw;
 import arc.graphics.g2d.TextureRegion;
 import arc.math.geom.Geometry;
 import arc.math.geom.Point2;
-import arc.struct.Seq;
 import arc.util.Eachable;
 import me13.core.block.ConnectionHand;
 import me13.core.block.SchemeConnectionHand;
@@ -33,7 +32,7 @@ public class AdvancedBlockHelper {
         }
         float x = plan.drawx();
         float y = plan.drawy();
-        float r = rotate ? plan.rotation*90 : 0;
+        float r = rotate ? plan.rotation * 90 : 0;
         switch(mapping) {
             case ROT -> Draw.rect(regions[plan.rotation], x, y, r);
             case REGION -> Draw.rect(regions[0], x, y, r);

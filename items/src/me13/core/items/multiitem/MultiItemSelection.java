@@ -62,19 +62,19 @@ public class MultiItemSelection {
 
                 ImageButton button4 = cont.button(Tex.whiteui, Styles.clearNoneTogglei, 40f, () -> {
                     list.forEach(toggler::get);
-                }).tooltip(Core.bundle.get("ol.reverse")).get();
+                }).tooltip(Core.bundle.get("me13.config.bundle.reverse")).get();
                 button4.getStyle().imageUp = Icon.refresh;
                 rower.run();
 
                 ImageButton button2 = cont.button(Tex.whiteui, Styles.clearNoneTogglei, 40f, () -> {
                     list.forEach(disabler::get);
-                }).tooltip(Core.bundle.get("ol.disableAll")).get();
+                }).tooltip(Core.bundle.get("me13.config.bundle.disableAll")).get();
                 button2.getStyle().imageUp = Icon.cancel;
                 rower.run();
 
                 ImageButton button3 = cont.button(Tex.whiteui, Styles.clearNoneTogglei, 40f, () -> {
                     list.forEach(enabled::get);
-                }).tooltip(Core.bundle.get("ol.enableAll")).get();
+                }).tooltip(Core.bundle.get("me13.config.bundle.enableAll")).get();
                 button3.getStyle().imageUp = Icon.add;
                 rower.run();
 
