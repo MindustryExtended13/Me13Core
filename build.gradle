@@ -2,7 +2,7 @@ apply plugin: "java"
 apply plugin: 'maven-publish'
 
 allprojects {
-    version = "v1.6"
+    version = "v1.7-beta"
     group = 'io.me13.core'
 }
 
