@@ -44,7 +44,7 @@ sourceCompatibility = 8
 targetCompatibility = JavaVersion.VERSION_16
 
 ext {
-    mindustryVersion = 'v145'
+    mindustryVersion = 'v144'
     jabelVersion = "93fde537c7"
     sdkRoot = System.getenv("ANDROID_HOME") ?: System.getenv("ANDROID_SDK_ROOT")
 }
