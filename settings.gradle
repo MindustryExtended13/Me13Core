@@ -9,4 +9,5 @@ include 'annotations'
 include 'util'
 include 'logger'
 include 'multicraft'
+include 'bundle2'
 
